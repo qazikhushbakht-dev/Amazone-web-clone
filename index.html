@@ -1,0 +1,533 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        html,
+        body {
+            background-color: azure;
+        }
+
+        .container {
+            background-color: #232f3e;
+            display: flex;
+            align-items: center;
+            color: white;
+            height: 12vh;
+        }
+
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
+        .main-logo {
+            height: 70px;
+            width: 114px;
+        }
+
+        .deliver {
+            color: #ccc;
+            margin-left: 30px;
+            font-weight: bold;
+        }
+
+        .pak {
+            font-weight: bolder;
+            color: white;
+            font-size: 1.1em;
+        }
+
+        .options {
+            height: 35px;
+            width: 70px;
+            margin-left: 30px;
+            border-radius: 5px 0 0 5px;
+            cursor: pointer;
+        }
+
+        .location {
+            margin-left: 30px;
+        }
+
+        .loc-show {
+            display: flex;
+        }
+
+        .search-bar {
+            height: 35px;
+            width: 531px;
+            text-align: center;
+        }
+
+        .search-bar:focus {
+            border: 2px solid rgb(223, 223, 60);
+            outline: none;
+        }
+
+        .src-icon {
+            background-color: #febd69;
+            color: black;
+            height: 35px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            border-radius: 0 5px 5px 0;
+            cursor: pointer;
+        }
+
+        .lang-box {
+            margin-left: 20px;
+        }
+
+        .globe {
+            cursor: pointer;
+        }
+
+        .hello {
+            margin-left: 20px;
+            cursor: pointer;
+            font-weight: bolder;
+        }
+
+        .returns {
+            font-weight: bolder;
+            margin-left: 20px;
+        }
+
+        .hello:hover,
+        .returns:hover,
+        .cart:hover {
+            border: 2px solid white;
+        }
+
+        .shop-cart {
+            margin-left: 40px;
+        }
+
+        .cart {
+            display: flex;
+            align-items: center;
+            cursor: pointer;
+        }
+
+
+        .bar-belt {
+            height: 8vh;
+            background-color: #37475A;
+            color: white;
+            display: flex;
+            align-items: center;
+            font-weight: bolder;
+        }
+
+        .box {
+            display: flex;
+            align-items: center;
+        }
+
+        .bars-line {
+            height: 2px;
+            width: 15px;
+            background-color: white;
+            margin: 5px;
+        }
+
+        .belt-btn {
+            height: 8vh;
+            background: transparent;
+            border: none;
+            color: white;
+            font-weight: bolder;
+            width: 110px;
+            cursor: pointer;
+        }
+
+        .belt-btn:hover {
+            border: 2px solid white;
+        }
+
+        #first-btn {
+            margin-left: 15px;
+        }
+
+
+        .carousel {
+            overflow: hidden;
+            width: 300px;
+            margin: 0 auto;
+            background-color: azure;
+        }
+
+        .images-link {
+            margin-top: 50px;
+            height: 300px;
+            border-radius: 10px;
+        }
+
+        .slides {
+            display: flex;
+            transition: transform 0.3s ease;
+        }
+
+        .slides img {
+            width: 300px;
+        }
+
+        img {
+            cursor: pointer;
+        }
+
+
+        main {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 20px;
+            background-color: azure;
+        }
+
+
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+
+        .cards {
+            width: 300px;
+            height: 420px;
+            background-color: bisque;
+            border-radius: 11px;
+            padding: 10px;
+            flex: 0 0 auto;
+            margin: 10px;
+        }
+
+
+        .cardOne {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cardOne img {
+            width: 90%;
+            height: 70%;
+            border-radius: 10px;
+        }
+
+
+        .card-two {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .upper-part img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .lower-part {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 10px;
+        }
+
+        .lower-part img {
+            width: 32%;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+
+        .mb {
+            margin-bottom: 10px;
+        }
+
+        .mt {
+            margin-top: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            font-weight: bolder;
+        }
+
+        .games {
+            font-weight: bolder;
+        }
+
+        .kit-img {
+            margin-top: 20px;
+        }
+
+
+        .card-three {
+            /* Match other cards size */
+            width: 300px;
+            height: 420px;
+            background-color: bisque;
+            border-radius: 11px;
+            padding: 10px;
+            flex: 0 0 auto;
+            margin: 10px;
+            position: relative;
+
+        }
+
+        .card-three h2 {
+            display: block;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+
+        .card-three .image-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 8px;
+            width: 100%;
+            height: calc(100% - 40px);
+
+        }
+
+        .card-three .image-grid img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 8px;
+            position: static;
+
+        }
+
+        .block {
+            display: block;
+        }
+
+        .Tech {
+            font-weight: bolder;
+            font-size: 1.6em;
+        }
+
+        a {
+            text-align: center;
+            width: 80px;
+            margin: 0 auto;
+            margin-top: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <img class="main-logo" src="amazon_logo.png" alt="404">
+            </div>
+            <span class="loc-show">
+                <i class="location material-symbols-outlined">
+                    location_on
+                </i>
+                <span class="deliver">
+                    Deliver <br>to <p class="pak">Pakistan</p>
+                </span>
+            </span>
+            <label for="items"></label>
+            <select class="options" id="items" name="items">
+                <option value="Household">All</option>
+                <option value="Skin Care">Skin Care</option>
+                <option value="Tech">Tech</option>
+                <option value="Gaiming">Gaming</option>
+                <option value="Computer">Computer</option>
+                <option value="Books">Books</option>
+                <option value="Music">Music</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Sports">Sports</option>
+                <option value="Boy's Fashion">Boy's Fashion</option>
+                <option value="Software">Software</option>
+                <option value="Luggage">Luggage</option>
+                <option value="Kitchen">Kitchen</option>
+            </select>
+            <input class="search-bar" type="search" name="src" id="src-bar" placeholder="Search Amazon">
+            <span class="src-icon  material-symbols-outlined">
+                search
+            </span>
+            <div class="lang-box">
+                <label for="language"></label>
+                <span class="globe material-symbols-outlined">
+                    language
+                </span>
+                <span>En</span>
+            </div>
+            <p class="hello">
+                Hello,Sign in <br>
+                Accounts & Lists
+            </p>
+            <div class="returns">
+                Returns <br>& Orders
+            </div>
+            <div class="cart">
+                <span class="shop-cart material-symbols-outlined">
+                    shopping_cart
+                </span>
+                <h3 class="Cart-txt">Cart</h3>
+            </div>
+        </nav>
+    </div>
+
+    <div class="bar-belt">
+        <div class="box">
+            <div class="main-bars">
+                <div class="bars-line"></div>
+                <div class="bars-line"></div>
+                <div class="bars-line"></div>
+            </div>
+            <h4>All</h4>
+        </div>
+        <button id="first-btn" class="belt-btn">Today's Deal</button>
+        <button class="belt-btn">Gift Cards</button>
+        <button class="belt-btn">Sell</button>
+        <button class="belt-btn">Registry</button>
+        <button class="belt-btn">Prime Video</button>
+        <button class="belt-btn">Customer Service</button>
+    </div>
+
+    <div class="carousel">
+        <div class="slides">
+            <img class="images-link" src="box1_image.jpg" alt="404">
+            <img class="images-link" src="box2_image.jpg" alt="404">
+            <img class="images-link" src="box3_image.jpg" alt="404">
+        </div>
+    </div>
+
+    <main>
+        <!-- ✅ All cards now inside cards-container -->
+        <div class="cards-container">
+
+            <!-- Card 1 -->
+            <div class="cards cardOne">
+                <h2 class="mb games">Get Your Game On</h2>
+                <img src="pc.jpg" alt="PC Gaming">
+                <a class="mt" href="#">Shop Now</a>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="cards card-two">
+                <div class="upper-part">
+                    <h2>Kitchen Equipments</h2>
+                    <img class="kit-img" src="kitchen.jpg" alt="Kitchen">
+                </div>
+                <div class="lower-part">
+                    <img src="pots.jpg" alt="Pots">
+                    <img src="kettle.jpg" alt="Kettle">
+                    <img src="coffe.jpg" alt="Coffee">
+                </div>
+            </div>
+
+            <!-- Card 3 — ✅ FIXED: images now in a 2x2 grid, no overlapping -->
+            <div class="cards card-three">
+                <h2 class="Tech">Tech Related</h2>
+                <div class="image-grid">
+                    <img src="headphone.jpg" alt="Headphones">
+                    <img src="airpods.jpg" alt="Airpods"> <!-- ✅ This was the broken one -->
+                    <img src="bt spk.jpg" alt="BT Speaker">
+                    <img src="laptops.jpg" alt="Laptops">
+                </div>
+            </div>
+
+            <!-- Card 4  -->
+            <div class="cards card-three four">
+                <h2 class="clothes">Clothings</h2>
+                <div class="image-grid">
+                    <img src="bt shirt.jpg" alt="">
+                    <img src="jeans.jpg" alt="">
+                    <img src="air j.jpg" alt="">
+                    <img src="jkt.jpg" alt="">
+                </div>
+                <a class="center" href="#">Shop at Best Price</a>
+            </div>
+            <!--card 5 -->
+            <div class="cards card-three four">
+                <h2 class="Gym">Health and Gym</h2>
+                <div class="image-grid">
+                    <img src="dumb.jpg" alt="">
+                    <img src="tread.jpg" alt="">
+                    <img src="paltes.jpg" alt="">
+                    <img src="power racks.jpg" alt="">
+                </div>
+                <a class="center" href="#">Order Now</a>
+            </div>
+            <div class="cards card-three four">
+                <h2 class="">Medical Equipments</h2>
+                <div class="image-grid">
+                    <img src="latex.jpg" alt="">
+                    <img src="medkit.jpg" alt="">
+                    <img src="teeeeka.jpg" alt="">
+                    <img src="malish.jpg" alt="">
+                </div>
+                <a class="center" href="#">View Medical Stock</a>
+            </div>
+        </div>
+        <div class="cards card-three four">
+            <h2 class="Toys">Toys for kids</h2>
+            <div class="image-grid">
+                <img src="cube.jpg" alt="">
+                <img src="3 by 3.jpg" alt="">
+                <img src="4x4.jpg" alt="">
+                <img src="mirror.jpg" alt="">
+            </div>
+            <a class="center" href="#">Explore Toys for Kids</a>
+        </div>
+        <div class="cards card-three four">
+                <h2 class=""></h2>
+                <div class="image-grid">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                    <img src="" alt="">
+                </div>
+                <a class="center" href="#">Order Now</a>
+            </div>
+    </main>
+</body>
+
+<script>
+    let index = 0;
+    const slides = document.querySelector('.slides');
+    const total = slides.children.length;
+
+    function updateSlides() {
+        const slideWidth = slides.children[0].clientWidth;
+        slides.style.transform = `translateX(-${index * slideWidth}px)`;
+    }
+
+    // autoplay slides functionality
+    setInterval(() => {
+        index = (index + 1) % total;
+        updateSlides();
+    }, 3000);
+</script>
+
+</html>
